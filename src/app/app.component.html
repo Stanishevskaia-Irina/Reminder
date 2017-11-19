@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <header>
+    <textarea name="textarea" id="" rows="5" placeholder="Enter description of reminder" [(ngModel)]="description"></textarea>
+    <div class="wrapper_input_button">
+      <input placeholder="Choose date and time"
+             [(ngModel)]="date1"
+             ngui-datetime-picker
+             [close-on-select]="false"
+             [(ngModel)]="dateTime"/>
+      <button (click)="addReminder()" title="Add reminder to list">
+        Add
+      </button>
+    </div>
+  </header>
+  <main>
+    <ul>
+      <li *ngFor = "let reminder of arrReminders; let i = index">
+        <p>{{i+1}}. {{reminder.stringDateTime}} {{reminder.description}}</p>
+        <button (click)="deleteReminder(i)" title="Delete reminder from list">Delete</button>
+      </li>
+    </ul>
+  </main>
+</div>
