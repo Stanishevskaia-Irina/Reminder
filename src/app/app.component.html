@@ -1,6 +1,15 @@
 <div class="wrapper">
   <header>
     <textarea name="textarea" id="" rows="5" placeholder="Enter description of reminder" [(ngModel)]="description"></textarea>
+    <div class="enter_tags">
+      <input type="text" placeholder="Enter tag" [(ngModel)]="tag">
+      <button (click)="addTag()" title="Add tag">Add</button>
+      <p>
+        <span *ngFor = "let currentTag of arrTags; let i = index" [ngClass]="{invisible: visibility}">
+          #{{currentTag}}
+        </span>
+      </p>
+    </div>
     <div class="wrapper_input_button">
       <input placeholder="Choose date and time"
              [(ngModel)]="date1"
@@ -11,11 +20,22 @@
         Add
       </button>
     </div>
+    <div class="search">
+
+      <input #inputField type="text" placeholder="Search by description" [(ngModel)]="term1"
+             (keyup)="searchOnDescription(inputField.value)">
+      <button title="Return to list of reminders" class="description_search" (click)="deleteSearchText()">X</button>
+
+      <input #inputFieldTag type="text" placeholder="Search by tag" [(ngModel)]="term2"
+             (keyup)="searchOnTags(inputFieldTag.value)">
+      <button title="Return to list of reminders" class="tag_search" (click)="deleteTagSearchText()">X</button>
+
+    </div>
   </header>
   <main>
     <ul>
-      <li *ngFor = "let reminder of arrReminders; let i = index">
-        <p>{{i+1}}. {{reminder.stringDateTime}} {{reminder.description}}</p>
+      <li *ngFor = "let reminder of arrReminders; let i = index" [ngClass]="{ended: arrReminders[i]['isEnded']}">
+        <p>{{ i+1 }}. {{ reminder.stringDateTime }} {{reminder.description}} #{{reminder.tags}} </p>
         <button (click)="deleteReminder(i)" title="Delete reminder from list">Delete</button>
       </li>
     </ul>

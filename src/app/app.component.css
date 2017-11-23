@@ -35,7 +35,7 @@ header button:hover {
 }
 
 my-date-picker {
-  width: 210px;
+  width: 160px;
   margin: 10px;
 }
 
@@ -49,7 +49,7 @@ header input {
   display: block;
   padding-left: 5px;
   height: 48px;
-  width: 200px;
+  width: 155px;
   border-radius: 5px;
   border: 1px black;
   box-shadow: 0 3px 2px rgba(0,0,0,0.6);
@@ -58,14 +58,98 @@ header input {
 
 header textarea {
   display: block;
-  width: 270px;
-  height: 75px;
+  width: 220px;
+  height: 80px;
   margin: 10px;
   padding: 5px;
   border: 1px black;
   border-radius: 5px;
   box-shadow: 0 3px 2px rgba(0,0,0,0.6);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+header .enter_tags {
+  position: relative;
+}
+
+header .enter_tags input {
+  padding-right: 60px;
+  width: 165px;
+}
+
+header .enter_tags button {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  height: 30px;
+}
+
+header .enter_tags p {
+  width: 230px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  /*min-height: 15px;*/
+}
+
+header .enter_tags p .invisible {
+  display: none;
+}
+
+header .search {
+  position: relative;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+header .search input {
+  padding-right: 60px;
+  width: 163px;
+  height: 30px;
+}
+
+header .search button {
+  position: absolute;
+  height: 20px;
+  right: 5px;
+}
+
+header .search button.description_search {
+  top: 5px;
+}
+
+header .search button.tag_search {
+  bottom: 5px;
+}
+
+header .search .wrapper_list_of_description_search {
+  position: absolute;
+  top: 114px;
+  width: 250px;
+}
+
+header .search .invisible {
+  display: none;
+}
+
+header .search .list_of_description_search p {
+  padding-right: 60px;
+  padding-left: 5px;
+  min-height: 25px;
+  line-height: 25px;
+  border: solid 1px black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+header .search .list_of_description_search button {
+  margin: 3px;
+}
+
+header .search .wrapper_list_of_tag_search {
+  position: absolute;
+  top: 114px;
+  width: 250px;
 }
 
 main {
@@ -101,3 +185,8 @@ main li button {
 main li button:hover {
   color: white;
 }
+
+main li.ended {
+  color: #95070b;
+}
+

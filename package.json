@@ -32,6 +32,7 @@
     "angular-in-memory-web-api": "~0.5.0",
     "core-js": "^2.4.1",
     "mydatepicker": "^2.5.0",
+    "ng2-search-filter": "^0.3.1",
     "rxjs": "^5.5.2",
     "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.4"
