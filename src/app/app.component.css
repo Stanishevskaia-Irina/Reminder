@@ -89,7 +89,6 @@ header .enter_tags p {
   background-color: white;
   margin: 10px;
   border-radius: 5px;
-  /*min-height: 15px;*/
 }
 
 header .enter_tags p .invisible {
@@ -122,41 +121,11 @@ header .search button.tag_search {
   bottom: 5px;
 }
 
-header .search .wrapper_list_of_description_search {
-  position: absolute;
-  top: 114px;
-  width: 250px;
-}
-
-header .search .invisible {
-  display: none;
-}
-
-header .search .list_of_description_search p {
-  padding-right: 60px;
-  padding-left: 5px;
-  min-height: 25px;
-  line-height: 25px;
-  border: solid 1px black;
-  border-radius: 5px;
-  background-color: white;
-}
-
-header .search .list_of_description_search button {
-  margin: 3px;
-}
-
-header .search .wrapper_list_of_tag_search {
-  position: absolute;
-  top: 114px;
-  width: 250px;
-}
-
 main {
   margin: 0 auto;
 }
 
-main li:nth-child(2n-1) {
+main li {
   background-color: rgba(205,205,210,0.97);
 }
 

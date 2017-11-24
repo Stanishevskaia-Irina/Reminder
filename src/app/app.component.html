@@ -21,15 +21,12 @@
       </button>
     </div>
     <div class="search">
-
-      <input #inputField type="text" placeholder="Search by description" [(ngModel)]="term1"
+      <input #inputField type="text" placeholder="Search by description" [(ngModel)]="searchTextDescription"
              (keyup)="searchOnDescription(inputField.value)">
-      <button title="Return to list of reminders" class="description_search" (click)="deleteSearchText()">X</button>
-
-      <input #inputFieldTag type="text" placeholder="Search by tag" [(ngModel)]="term2"
+      <button title="Return to list of reminders" class="description_search" (click)="clearSearchText()">X</button>
+      <input #inputFieldTag type="text" placeholder="Search by tag" [(ngModel)]="searchTextTag"
              (keyup)="searchOnTags(inputFieldTag.value)">
-      <button title="Return to list of reminders" class="tag_search" (click)="deleteTagSearchText()">X</button>
-
+      <button title="Return to list of reminders" class="tag_search" (click)="clearTagSearchText()">X</button>
     </div>
   </header>
   <main>

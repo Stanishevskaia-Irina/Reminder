@@ -5,9 +5,6 @@ import { AppComponent } from './app.component';
 
 import { NguiDatetimePickerModule } from '@ngui/datetime-picker';
 
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
-
 @NgModule({
   declarations: [
     AppComponent
@@ -15,8 +12,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   imports: [
     BrowserModule,
     FormsModule,
-    NguiDatetimePickerModule,
-    Ng2SearchPipeModule
+    NguiDatetimePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
